@@ -1,7 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-const PORT = 3000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
@@ -156,6 +155,3 @@ app.get('/api/registros', (req, res) => {  //  llamar ala ruta donde los registr
   res.json(registros);
 });
 
-app.listen(PORT, () => {
-  console.log(`Servidor en ejecución en http://localhost:${PORT}`);  // peurot de la aipi 
-});
